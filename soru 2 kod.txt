@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+int en_kucuk_eleman(int dizi[], int n) {
+
+    int en_kucuk = dizi[0];
+    for(int i = 1; i < n; i++) 
+  {
+        if(dizi[i] < en_kucuk)
+  {
+            en_kucuk = dizi[i];
+     }
+   }
+    
+ return en_kucuk;
+}
+
+int main() {
+
+    int dizi[] = {3, 1, 4, 1, 5, 9, 2, 6, 5, 3, 5};
+    int n = sizeof(dizi) / sizeof(dizi[0]);
+    int en_kucuk = en_kucuk_eleman(dizi, n);
+    printf("En kucuk eleman: %d\n", en_kucuk);
+
+    return 0;
+
+}
